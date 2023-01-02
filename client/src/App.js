@@ -7,6 +7,11 @@ import MyPhotos from "./components/MyPhotos";
 import SharePhoto from "./components/SharePhoto";
 import Photos from "./components/Photos";
 
+// configure react tostify
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// configure websocket
 import { io } from "socket.io-client";
 import "./App.css";
 
