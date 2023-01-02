@@ -15,10 +15,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { io } from "socket.io-client";
 import "./App.css";
 
-// http://localhost:4000 is where the server host URL.
-const socket = io.connect("http://localhost:4000");
-
 function App() {
+  // http://localhost:4000 is where the server host URL.
+  const socket = io.connect("http://localhost:4000");
+
   return (
     <div className="App">
       <Router>
@@ -34,6 +34,7 @@ function App() {
           <Route path="/share/:user" element={<SharePhoto socket={socket} />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </div>
   );
 }
